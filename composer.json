@@ -21,7 +21,10 @@
     "laravel": {
       "providers": [
         "Anwar\\Soshare\\SoshareProvider"
-      ]
+      ],
+      "aliases": {
+            "Soshare": "Anwar\\Soshare\\SoshareFacade"
+        }
     }
   }
 }
