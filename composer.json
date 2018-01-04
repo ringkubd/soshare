@@ -5,6 +5,9 @@
     "license": "MIT",
     "tag_name": "v1.0.0",
     "target_commitish": "master",
+    "require": {
+        "php": "^7.0"
+    },
     "authors": [
         {
             "name": "MD ANWAR JAHID",
