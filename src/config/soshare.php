@@ -11,14 +11,18 @@ return[
 		'url' => 'https://www.facebook.com/sharer/sharer.php?u='
 	],
     'twitter' => [
-        'uri' => 'https://twitter.com/intent/tweet',
-        'text' => 'Default share text'
-    ],
-    'gplus' => [
-        'uri' => 'https://plus.google.com/share?url=',
+        'uri'         => 'https://twitter.com/intent/tweet?',
+        'text'        => 'This link is shared by Soshare Laravel plugin',
+        'hashtags'    => '#bdaliens',
+        'via'         => 'bdaliens',
+        'related'     => 'bdaliens', //related account multiple using comma separated;
+        'inreplyto'   => 'bdaliens' //repaly whom. in reply to;
     ],
     'linkedin' => [
-        'uri' => 'http://www.linkedin.com/shareArticle',
-        'extra' => ['mini' => 'true']
+        'uri'         => 'https://www.linkedin.com/shareArticle?',
+        'summary'     => 'This link is shared by Soshare Laravel plugin',//The url-encoded description that you wish you use.
+        'mini'        => 'true', //A required argument who's value must always be:  true
+        'title'       => 'bdaliens',//The url-encoded title value that you wish you use.200 No
+        'source'      => 'bdaliens', //The url-encoded source of the content (e.g. your website or application name);
     ],
 ];
