@@ -23,7 +23,6 @@ public function fblinkshare($selector)
       window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');return false;
     })
    })
-
    </script>
 EOT;
     }
@@ -37,8 +36,6 @@ EOT;
       $via         = config('soshare.twitter.via');
       $related     = config('soshare.twitter.related');
       $inreplyto   = config('soshare.twitter.inreplyto');
-
-
       return <<<EOT
    <script>
 
@@ -54,18 +51,13 @@ EOT;
       var inreplyto   = 'inreplyto='+"$inreplyto"
       var separator   = "&"
       var shareurl    = uri + separator + text + separator + url + separator + hashtags + separator + via +separator + related + separator + inreplyto
-
-      console.log(shareurl)
       window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');return false;
     })
    })
 
    </script>
 EOT;
-
-
     }
-
 
     public function linkdin($selector)
     {
@@ -74,9 +66,6 @@ EOT;
       $mini        = config('soshare.linkedin.mini');
       $title       = config('soshare.linkedin.title');
       $source      = config('soshare.linkedin.source');
-
-
-
       return <<<EOT
    <script>
 
@@ -91,8 +80,6 @@ EOT;
       var source      = 'source='+"$source"
       var separator   = "&"
       var shareurl    = uri + url + separator + summary + separator + mini +separator + title + separator + source
-
-      console.log(shareurl)
       window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');return false;
     })
    })
