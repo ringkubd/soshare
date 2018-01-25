@@ -3,9 +3,6 @@
     "description": "soshare is a Social Share laravel package its support all over well known social network include fb,tw,lnkdin\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[D\u001b[Dacebool,\u001b[2~\u001b[C\u001b[Ctwitter,linkdin , whatsapp, google plus.",
     "type": "library",
     "license": "MIT",
-    "version": "1.1.0",
-    "tag": "1.1.0",
-    "target_commitish": "master",
     "require": {
         "php": "^7.0"
     },
