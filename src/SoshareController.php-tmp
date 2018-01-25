@@ -2,41 +2,40 @@
 
 namespace Anwar\Soshare;
 
-use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class SoshareController extends Controller
-{
+class SoshareController extends Controller {
 
-public function fblinkshare($selector)
-    {
-      $abc = config('soshare.facebook.url');
-      return <<<EOT
+	public function fblinkshare($selector) {
+		$abc = config('soshare.facebook.url');
+		return <<<EOT
    <script>
 
    $(document).ready(function(){
     $(document).on('click',"$selector",function(){
-    
+
       var prothomongsho = "$abc"
       var ditioongsho   = $(this).attr('href')
       var shareurl = prothomongsho + ditioongsho
-      window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');return false;
+      window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');
+return false;
+
     })
    })
    </script>
-EOT;
-    }
+EOT
+		;
 
+	}
 
-    public function twitter($selector)
-    {
-      $uri         = config('soshare.twitter.uri');
-      $text        = config('soshare.twitter.text');
-      $hashtags    = config('soshare.twitter.hashtags');
-      $via         = config('soshare.twitter.via');
-      $related     = config('soshare.twitter.related');
-      $inreplyto   = config('soshare.twitter.inreplyto');
-      return <<<EOT
+	public function twitter($selector) {
+		$uri       = config('soshare.twitter.uri');
+		$text      = config('soshare.twitter.text');
+		$hashtags  = config('soshare.twitter.hashtags');
+		$via       = config('soshare.twitter.via');
+		$related   = config('soshare.twitter.related');
+		$inreplyto = config('soshare.twitter.inreplyto');
+		return <<<EOT
    <script>
 
    $(document).ready(function(){
@@ -51,23 +50,26 @@ EOT;
       var inreplyto   = 'inreplyto='+"$inreplyto"
       var separator   = "&"
       var shareurl    = uri + separator + text + separator + url + separator + hashtags + separator + via +separator + related + separator + inreplyto
-      window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');return false;
+      window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');
+return false;
+
     })
    })
 
    </script>
-EOT;
-    }
+EOT
+		;
 
-    public function linkdin($selector)
-    {
-      $uri         = config('soshare.linkedin.uri');
-      $summary     = config('soshare.linkedin.summary');
-      $mini        = config('soshare.linkedin.mini');
-      $title       = config('soshare.linkedin.title');
-      $source      = config('soshare.linkedin.source');
-      return <<<EOT
-      
+	}
+
+	public function linkdin($selector) {
+		$uri     = config('soshare.linkedin.uri');
+		$summary = config('soshare.linkedin.summary');
+		$mini    = config('soshare.linkedin.mini');
+		$title   = config('soshare.linkedin.title');
+		$source  = config('soshare.linkedin.source');
+		return <<<EOT
+
    <script>
    $(document).ready(function(){
     $(document).on('click',"$selector",function(){
@@ -80,13 +82,15 @@ EOT;
       var source      = 'source='+"$source"
       var separator   = "&"
       var shareurl    = uri + url + separator + summary + separator + mini +separator + title + separator + source
-      window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');return false;
+      window.open(shareurl,'_blank','toolbar=no,location=no,status=no,menubar=no,scrollbars=yes,resizable=yes,width=300,height=300');
+return false;
+
     })
    })
 
    </script>
-EOT;
+EOT
+		;
 
-
-    }
+	}
 }
